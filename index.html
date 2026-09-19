@@ -1,0 +1,737 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Capsule Educational Institute | Online Bachelor's & Master's Degrees in Abu Dhabi</title>
+<meta name="description" content="Online Bachelor's and Master's programmes from Rabindranath Tagore University, India. Online classes, online exams, admission support in Abu Dhabi. Call or WhatsApp +971 54 247 4416.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#FFFFFF; --surface:#FAFAFA; --ink:#111111; --muted:#6B6B6B; --line:#E3E3E3;
+  --accent:#E63946; --accent-hover:#C81E33;
+  --hero:#111111; --footer:#000000;
+  --font:'Inter',system-ui,-apple-system,'Segoe UI',Roboto,Arial,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (min-width:861px){html{scroll-padding-top:88px}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font);font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased}
+svg,img{max-width:100%}
+a{color:var(--ink)}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:4px}
+.wrap{width:min(1120px,100% - 40px);margin-inline:auto}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.ico{width:20px;height:20px;flex:none;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+
+/* header */
+.site-header{background:var(--bg);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:50}
+.site-header .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px 24px;min-height:72px;padding-block:10px}
+.logo-slot{display:flex;align-items:center;gap:10px;color:var(--ink);text-decoration:none;font-weight:700;font-size:1.1rem;letter-spacing:-.01em}
+.logo-slot .logo-box{width:40px;height:40px;border:1.5px dashed var(--line);border-radius:8px;display:grid;place-items:center;font-size:.6rem;color:var(--muted);text-align:center;line-height:1.1}
+.nav{display:flex;gap:26px;list-style:none;margin:0;padding:0;overflow-x:auto}
+.nav a{color:var(--ink);text-decoration:none;font-weight:500;font-size:.95rem;white-space:nowrap}
+.nav a:hover{color:var(--accent)}
+.header-cta{display:none}
+@media (min-width:861px){.header-cta{display:inline-flex}}
+@media (max-width:860px){
+  .main-nav{order:3;width:100%;border-top:1px solid var(--line);padding-top:6px}
+}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:48px;padding:0 24px;border-radius:999px;font:600 .98rem/1 var(--font);text-decoration:none;border:2px solid transparent;cursor:pointer}
+.btn-primary{background:var(--accent);color:#fff}
+.btn-primary:hover{background:var(--accent-hover)}
+.btn-ghost{border-color:currentColor;color:var(--ink)}
+.btn-ghost:hover{background:rgba(0,0,0,.06)}
+.btn-ink{background:var(--ink);color:#fff}
+.btn-sm{min-height:40px;padding:0 16px;font-size:.9rem}
+.on-navy .btn-ghost{color:#fff}
+.on-navy .btn-ghost:hover{background:rgba(255,255,255,.12)}
+
+/* hero */
+.hero{background:var(--hero);color:#fff;padding:72px 0 96px}
+.hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
+.hero h1{font-size:clamp(2.1rem,4.6vw,3.4rem);line-height:1.1;letter-spacing:-.02em;font-weight:800;margin:0 0 20px}
+.lead{font-size:1.1rem;color:#D4D4D4;max-width:52ch;margin:0 0 32px}
+.cta-row{display:flex;flex-wrap:wrap;gap:14px}
+.hero-facts{list-style:none;padding:0;margin:36px 0 0;display:grid;gap:10px;color:#C9C9C9;font-size:.95rem}
+.hero-facts li{display:flex;gap:10px;align-items:center}
+.hero-facts .ico{color:var(--accent);width:18px;height:18px;stroke-width:2.6}
+.tickets{display:grid;gap:20px}
+.ticket{position:relative;display:grid;grid-template-columns:1fr auto;background:#fff;color:#111;border-radius:14px}
+.ticket::before{content:"";position:absolute;inset:0 auto 0 0;width:8px;background:var(--accent);border-radius:14px 0 0 14px}
+.ticket-main{padding:24px 24px 24px 34px}
+.ticket-title{margin:0;font-size:1.3rem;font-weight:700;line-height:1.3}
+.ticket-sub{margin:2px 0 18px;color:#6B6B6B;font-size:.95rem}
+.ticket-meta{display:grid;grid-template-columns:repeat(2,auto);gap:14px 32px;margin:0}
+.ticket-meta dt{font-size:.78rem;color:#8A8A8A}
+.ticket-meta dd{margin:2px 0 0;font-weight:600;font-size:.92rem}
+.ticket-stub{position:relative;border-left:2px dashed #D4D4D4;padding:24px 28px;min-width:170px;display:flex;flex-direction:column;justify-content:center}
+.stub-label{font-size:.78rem;color:#8A8A8A}
+.stub-price{font-size:2rem;font-weight:800;letter-spacing:-.01em}
+.stub-price small{font-size:.9rem;font-weight:700;margin-right:6px}
+.stub-vat{font-size:.85rem;color:#6B6B6B}
+
+/* sections */
+.section{padding:88px 0}
+.band{background:var(--surface);border-block:1px solid var(--line)}
+.section-head{max-width:70ch;margin-bottom:44px}
+.eyebrow{display:inline-block;color:var(--accent);font-weight:700;font-size:.85rem;letter-spacing:.06em;text-transform:uppercase;margin-bottom:10px}
+h2{font-size:clamp(1.7rem,3.2vw,2.3rem);line-height:1.2;letter-spacing:-.015em;font-weight:800;margin:0 0 14px}
+h3{font-size:1.2rem;line-height:1.35;font-weight:700;margin:0 0 10px}
+.section-head p{margin:0;color:var(--muted)}
+p{margin:0 0 14px}
+.muted{color:var(--muted)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:56px}
+.checks{list-style:none;padding:0;margin:14px 0 0;display:grid;gap:10px}
+.checks li{position:relative;padding-left:30px}
+.checks li::before{content:"";position:absolute;left:2px;top:.5em;width:14px;height:7px;border-left:3px solid var(--accent);border-bottom:3px solid var(--accent);transform:rotate(-45deg)}
+.fineprint{font-size:.88rem;color:var(--muted);max-width:70ch;margin-top:28px}
+
+/* why-cards */
+.why-cards{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.why-card{border:1px solid var(--line);border-radius:16px;padding:32px;background:var(--surface)}
+.why-card h3{font-size:1.3rem;margin-bottom:12px}
+
+/* programmes */
+.level{display:grid;grid-template-columns:300px 1fr;gap:48px;padding:40px 0;border-top:1px solid var(--line)}
+.level:first-of-type{padding-top:8px;border-top:0}
+.level:last-of-type{padding-bottom:0}
+.fees{width:100%;border-collapse:collapse;margin-top:20px}
+.fees th,.fees td{padding:10px 0;border-bottom:1px solid var(--line);text-align:left;font-weight:400;font-size:.95rem}
+.fees td{text-align:right;white-space:nowrap}
+.fees .total th,.fees .total td{font-weight:700;border-bottom:0;padding-top:14px;font-size:1rem}
+.fees .total td small{display:block;font-weight:500;font-size:.8rem;color:var(--muted)}
+.progs{width:100%;border-collapse:collapse}
+.progs th,.progs td{text-align:left;vertical-align:top;padding:18px 18px 18px 0;border-top:1px solid var(--line)}
+.progs thead th{font-size:.85rem;color:var(--muted);font-weight:500;padding-top:0;padding-bottom:10px;border-top:0}
+.progs tbody th{font-weight:700;font-size:1.05rem;width:56%}
+.progs tbody th span{display:block;font-weight:400;color:var(--muted);font-size:.9rem}
+.progs tbody tr:last-child > *{border-bottom:1px solid var(--line)}
+.chips{list-style:none;margin:10px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:6px}
+.chips li{border:1px solid var(--line);border-radius:999px;padding:1px 11px;font-size:.8rem;color:var(--muted)}
+
+/* payment */
+.pay{display:grid;grid-template-columns:repeat(3,1fr);gap:0 44px;list-style:none;margin:0;padding:0}
+.pay li{border-top:4px solid var(--ink);padding-top:22px}
+.pay h3{font-size:1.5rem;font-weight:800;margin-bottom:8px}
+.pay p{color:var(--muted);margin:0}
+.pay-foot{display:flex;flex-wrap:wrap;gap:20px 32px;align-items:center;justify-content:space-between;margin-top:40px}
+.pay-foot p{margin:0;max-width:64ch;color:var(--muted);font-size:.92rem}
+
+/* approvals */
+.facts{margin:24px 0 0;display:grid;gap:0}
+.facts div{display:grid;grid-template-columns:150px 1fr;gap:16px;padding:12px 0;border-top:1px solid var(--line)}
+.facts div:last-child{border-bottom:1px solid var(--line)}
+.facts dt{color:var(--muted);font-size:.92rem}
+.facts dd{margin:0;font-weight:600}
+.recs{width:100%;border-collapse:collapse;margin-top:6px}
+.recs th,.recs td{text-align:left;vertical-align:top;padding:12px 16px 12px 0;border-top:1px solid var(--line)}
+.recs tr:last-child > *{border-bottom:1px solid var(--line)}
+.recs th{width:34%;font-weight:700}
+.recs td{color:var(--muted)}
+.honours{margin-top:64px}
+.honours h3{margin-bottom:6px}
+.log{margin:14px 0 0}
+.log div{display:grid;grid-template-columns:146px 1fr;gap:16px;padding:12px 0;border-top:1px solid var(--line)}
+.log div:last-child{border-bottom:1px solid var(--line)}
+.log dt{font-weight:700}
+.log dd{margin:0;color:var(--muted)}
+
+/* chancellor */
+.chancellor{display:grid;grid-template-columns:220px 1fr;gap:40px;align-items:start}
+.chancellor-photo{width:100%;aspect-ratio:1;border-radius:14px;background:var(--surface);border:1px dashed var(--line);display:grid;place-items:center;color:var(--muted);font-size:.8rem;text-align:center;padding:12px}
+.chancellor blockquote{margin:0 0 16px;padding:0;font-size:1.02rem;color:var(--ink)}
+.chancellor .name{font-weight:800;font-size:1.1rem}
+.chancellor .role{color:var(--muted);font-size:.9rem}
+
+/* steps */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:32px;list-style:none;counter-reset:s;padding:16px 0 0;margin:0}
+.steps li{counter-increment:s;position:relative;border-top:2px solid var(--line);padding-top:30px}
+.steps li::before{content:counter(s);position:absolute;top:-17px;left:0;width:34px;height:34px;border-radius:50%;background:var(--ink);color:#fff;display:grid;place-items:center;font-weight:700;font-size:.95rem}
+.steps h3{font-size:1.05rem;margin-bottom:6px}
+.steps p{margin:0;color:var(--muted);font-size:.95rem}
+
+/* lead form */
+.lead-section{background:var(--hero);color:#fff}
+.lead-section h2{color:#fff}
+.lead-wrap{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+.lead-panel{background:#fff;color:#111;border-radius:16px;padding:36px}
+.field{margin-bottom:18px}
+.field label{display:block;font-weight:600;font-size:.92rem;margin-bottom:6px}
+.field input,.field select{width:100%;min-height:48px;padding:0 14px;border:1.5px solid #D4D4D4;border-radius:10px;font:400 1rem var(--font);color:#111;background:#fff}
+.field input:focus-visible,.field select:focus-visible{outline:3px solid var(--accent);outline-offset:2px;border-color:var(--accent)}
+.lead-panel .btn{width:100%;margin-top:8px}
+.form-msg{margin-top:14px;font-size:.9rem;min-height:1.2em}
+.form-msg.ok{color:#1a7f37}
+.form-msg.err{color:#E63946}
+
+/* contact */
+.contact{background:var(--footer);color:#fff;padding:88px 0}
+.contact .grid{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:start}
+.contact h2{color:#fff}
+.numbers{list-style:none;padding:0;margin:32px 0 0;display:grid;gap:14px}
+.numbers li{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px 16px;padding:16px 18px;border:1px solid rgba(255,255,255,.24);border-radius:12px}
+.num-label{font-size:.78rem;color:#9A9A9A;display:block;margin-bottom:2px}
+.num{font-size:1.15rem;font-weight:700}
+.num-actions{display:flex;gap:10px;flex-wrap:wrap}
+.socials{display:flex;gap:12px;margin-top:24px}
+.socials a{display:inline-flex;align-items:center;gap:8px;color:#fff;border:1px solid rgba(255,255,255,.24);border-radius:999px;padding:8px 16px;font-size:.9rem;text-decoration:none}
+.socials a:hover{background:rgba(255,255,255,.12)}
+.address{display:flex;gap:14px;margin-top:32px;font-style:normal;color:#D4D4D4}
+.address strong{color:#fff}
+.address a{color:#fff}
+
+/* footer */
+.site-footer{background:#000;color:#9A9A9A;padding:36px 0;font-size:.85rem;border-top:1px solid #222}
+.site-footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
+.site-footer a{color:#fff}
+
+/* quickbar */
+.quickbar{display:none}
+@media (max-width:860px){
+  body{padding-bottom:78px}
+  .quickbar{display:grid;grid-template-columns:1fr 1fr;gap:10px;position:fixed;left:0;right:0;bottom:0;z-index:60;background:#fff;border-top:1px solid var(--line);padding:10px 16px calc(10px + env(safe-area-inset-bottom))}
+}
+
+@media (max-width:980px){
+  .hero .wrap,.two,.contact .grid,.level,.lead-wrap,.chancellor{grid-template-columns:1fr}
+  .why-cards{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr 1fr;gap:40px 32px}
+  .pay{grid-template-columns:1fr;gap:32px}
+}
+@media (max-width:700px){
+  .section{padding:64px 0}
+  .contact{padding:64px 0}
+  .hero{padding:48px 0 64px}
+  .ticket{grid-template-columns:1fr}
+  .ticket::before{inset:0 0 auto 0;width:auto;height:8px;border-radius:14px 14px 0 0}
+  .ticket-stub{border-left:0;border-top:2px dashed #D4D4D4}
+  .steps{grid-template-columns:1fr}
+  .facts div,.log div{grid-template-columns:1fr;gap:2px}
+  .progs thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+  .progs,.progs tbody,.progs tr,.progs th,.progs td{display:block;width:auto}
+  .progs tr{padding:18px 0;border-top:1px solid var(--line)}
+  .progs th,.progs td,.progs tbody th{border:0;padding:0;width:auto}
+  .progs td{margin-top:10px}
+  .progs td::before{content:attr(data-label);display:block;font-size:.8rem;color:var(--muted)}
+  .lead-panel{padding:24px}
+}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></symbol>
+    <symbol id="i-chat" viewBox="0 0 24 24"><path d="M21 11.5a8.5 8.5 0 0 1-12.6 7.4L3 20.5l1.7-5A8.5 8.5 0 1 1 21 11.5z"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><path d="M4 6h16v12H4z"/><path d="M4 7l8 6 8-6"/></symbol>
+    <symbol id="i-insta" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></symbol>
+  </defs>
+</svg>
+
+<header class="site-header">
+  <div class="wrap">
+    <!-- LOGO SLOT: replace this block with <img src="your-logo.png" alt="Capsule Educational Institute" style="height:44px"> -->
+    <a class="logo-slot" href="#top">
+      <span class="logo-box">YOUR<br>LOGO</span>
+      Capsule Educational Institute
+    </a>
+    <nav class="main-nav" aria-label="Main">
+      <ul class="nav">
+        <li><a href="#programmes">Programmes &amp; Fees</a></li>
+        <li><a href="#payment">Payment</a></li>
+        <li><a href="#approvals">Approvals</a></li>
+        <li><a href="#lead">Enquire</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <a class="btn btn-primary btn-sm header-cta" href="https://wa.me/971542474416?text=Hello%20Capsule%20Educational%20Institute%2C%20I%27d%20like%20details%20about%20your%20Bachelor%27s%20and%20Master%27s%20programmes." target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#i-chat"/></svg>WhatsApp us</a>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- Hero -->
+  <section class="hero on-navy" id="top">
+    <div class="wrap">
+      <div>
+        <h1>Upgrade your qualification while you keep working</h1>
+        <p class="lead">Bachelor's and Master's programmes from Rabindranath Tagore University, India. 100% online classes and online exams, complete in 6 to 8 months, with admission support from our Abu Dhabi office.</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="https://wa.me/971542474416?text=Hello%20Capsule%20Educational%20Institute%2C%20I%27d%20like%20details%20about%20your%20Bachelor%27s%20and%20Master%27s%20programmes." target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#i-chat"/></svg>Chat on WhatsApp</a>
+          <a class="btn btn-ghost" href="tel:+971502768411"><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg>Call +971 50 276 8411</a>
+        </div>
+        <ul class="hero-facts">
+          <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>Degrees awarded by Rabindranath Tagore University</li>
+          <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>Online classes and online exams, 6 to 8 months</li>
+          <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>Academic and admission support in Abu Dhabi</li>
+        </ul>
+      </div>
+
+      <div class="tickets">
+        <article class="ticket" aria-label="Bachelor's degree fee">
+          <div class="ticket-main">
+            <p class="ticket-title">Bachelor's degree</p>
+            <p class="ticket-sub">BA, BBA, B.Com, BCA</p>
+            <dl class="ticket-meta">
+              <div><dt>Duration</dt><dd>6 to 8 months</dd></div>
+              <div><dt>Study mode</dt><dd>Online</dd></div>
+            </dl>
+          </div>
+          <div class="ticket-stub">
+            <span class="stub-label">Total fee</span>
+            <span class="stub-price"><small>AED</small>6,000</span>
+            <span class="stub-vat">+ VAT</span>
+          </div>
+        </article>
+        <article class="ticket" aria-label="Master's degree fee">
+          <div class="ticket-main">
+            <p class="ticket-title">Master's degree</p>
+            <p class="ticket-sub">MA, MSc, MSW, M.Com, MBA</p>
+            <dl class="ticket-meta">
+              <div><dt>Duration</dt><dd>6 to 8 months</dd></div>
+              <div><dt>Study mode</dt><dd>Online</dd></div>
+            </dl>
+          </div>
+          <div class="ticket-stub">
+            <span class="stub-label">Total fee</span>
+            <span class="stub-price"><small>AED</small>8,500</span>
+            <span class="stub-vat">+ VAT</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why distance/online + why upgrade -->
+  <section class="section" id="why">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Why Capsule</span>
+        <h2>Study on your terms, without pausing your career</h2>
+      </div>
+      <div class="why-cards">
+        <div class="why-card">
+          <h3>Why Distance &amp; Online Education?</h3>
+          <p>Are you working full-time or unable to attend regular college classes? Distance &amp; Online Education provides greater flexibility, allowing you to continue your work while pursuing higher education.</p>
+        </div>
+        <div class="why-card">
+          <h3>Why Upgrade Your Qualification?</h3>
+          <p class="muted">A recognised Bachelor's or Master's qualification can help you:</p>
+          <ul class="checks">
+            <li>Upgrade your academic profile</li>
+            <li>Meet educational requirements for eligible job opportunities</li>
+            <li>Apply for positions where a degree is required or preferred</li>
+            <li>Develop your professional and academic profile</li>
+            <li>Support long-term career development</li>
+            <li>Continue your education while working</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Careers -->
+  <section class="section band" id="careers">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>A degree can open more roles</h2>
+        <p>Whatever industry or company you work in, a higher qualification can support your next application. Outcomes depend on the vacancy, your experience and the employer's requirements.</p>
+      </div>
+      <div class="two">
+        <div>
+          <h3>Bachelor's degree</h3>
+          <p class="muted">A degree can be useful when you apply for roles in areas such as:</p>
+          <ul class="checks">
+            <li>Administration and business support</li>
+            <li>Sales and commercial</li>
+            <li>Customer experience and service</li>
+            <li>Operations and logistics</li>
+            <li>HR and finance</li>
+            <li>Retail and hospitality management</li>
+            <li>Coordinator and supervisor roles, where requirements are met</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Master's degree</h3>
+          <p class="muted">A Master's qualification can further support your career development and your applications for specialised, senior or management-track positions, depending on the role, your experience and employer requirements.</p>
+          <p class="muted">Choose from MA, MSc, MSW, M.Com and MBA, with MBA combinations across finance, HR, marketing and IT.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Programmes -->
+  <section class="section" id="programmes">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Programmes, eligibility and fees</h2>
+        <p>All programmes are awarded by Rabindranath Tagore University. Fees are in UAE dirhams (AED) and exclude VAT. Online classes and online exams throughout.</p>
+      </div>
+
+      <div class="level">
+        <div>
+          <h3>Bachelor's degrees</h3>
+          <p class="muted">For learners who have completed 10th and 12th. Four programmes, 6 to 8 months.</p>
+          <table class="fees">
+            <caption class="sr">Bachelor's degree fee breakdown</caption>
+            <tbody>
+              <tr><th scope="row">University registration fee</th><td>AED 3,000</td></tr>
+              <tr><th scope="row">Course fee</th><td>AED 2,000</td></tr>
+              <tr><th scope="row">Programme fee</th><td>AED 1,000</td></tr>
+              <tr class="total"><th scope="row">Total</th><td>AED 6,000<small>+ VAT</small></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <table class="progs">
+          <caption class="sr">Bachelor's programmes and eligibility</caption>
+          <thead><tr><th scope="col">Programme</th><th scope="col">Eligibility</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">BA<span>Bachelor of Arts, General</span></th><td data-label="Eligibility">10th and 12th from a recognised board</td></tr>
+            <tr><th scope="row">BBA<span>Bachelor of Business Administration, General</span></th><td data-label="Eligibility">10th and 12th from a recognised board (not open to +2 Humanities)</td></tr>
+            <tr><th scope="row">B.Com<span>Bachelor of Commerce</span></th><td data-label="Eligibility">10th and 12th, in Science (with Maths) or Commerce</td></tr>
+            <tr><th scope="row">BCA<span>Bachelor of Computer Application</span></th><td data-label="Eligibility">10th and 12th with Physics, Chemistry and Maths (PCM)</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="level">
+        <div>
+          <h3>Master's degrees</h3>
+          <p class="muted">For graduates. Five programmes, 6 to 8 months.</p>
+          <table class="fees">
+            <caption class="sr">Master's degree fee breakdown</caption>
+            <tbody>
+              <tr><th scope="row">University registration fee</th><td>AED 4,000</td></tr>
+              <tr><th scope="row">Course fee</th><td>AED 3,000</td></tr>
+              <tr><th scope="row">Programme fee</th><td>AED 1,500</td></tr>
+              <tr class="total"><th scope="row">Total</th><td>AED 8,500<small>+ VAT</small></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <table class="progs">
+          <caption class="sr">Master's programmes and eligibility</caption>
+          <thead><tr><th scope="col">Programme</th><th scope="col">Eligibility</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">MSc<span>Master of Science</span><ul class="chips"><li>Physics</li><li>Chemistry</li><li>IT</li><li>Mathematics</li></ul></th><td data-label="Eligibility">B.Sc in the relevant stream</td></tr>
+            <tr><th scope="row">MA<span>Master of Arts</span><ul class="chips"><li>Hindi</li><li>Sociology</li><li>Economics</li><li>Political Science</li><li>English</li></ul></th><td data-label="Eligibility">Graduation from a recognised university</td></tr>
+            <tr><th scope="row">MSW<span>Master of Social Work</span></th><td data-label="Eligibility">Graduation from a recognised university</td></tr>
+            <tr><th scope="row">M.Com<span>Master of Commerce</span></th><td data-label="Eligibility">Bachelor of Commerce</td></tr>
+            <tr><th scope="row">MBA<span>Master of Business Administration</span><ul class="chips"><li>Finance and IT</li><li>HR and Finance</li><li>HR and IT</li><li>Marketing and Finance</li><li>Marketing and HR</li><li>Marketing and IT</li></ul></th><td data-label="Eligibility">Graduation from a recognised university</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="fineprint">Programme details, fees and eligibility follow the RNTU prospectus and can change. Confirm current details with our team before you register.</p>
+    </div>
+  </section>
+
+  <!-- Payment -->
+  <section class="section band" id="payment">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Spread the cost of your degree</h2>
+        <p>You do not have to pay the full fee at once. Choose Tabby, Tamara or an EMI plan.</p>
+      </div>
+      <ul class="pay">
+        <li><h3>Tabby</h3><p>Split your programme fee into instalments with Tabby.</p></li>
+        <li><h3>Tamara</h3><p>Split your programme fee into instalments with Tamara.</p></li>
+        <li><h3>EMI</h3><p>Pay the fee in monthly instalments with an EMI plan.</p></li>
+      </ul>
+      <div class="pay-foot">
+        <p>Instalment plans, limits and approval depend on the provider and your eligibility. Ask us which option suits your programme before you register.</p>
+        <a class="btn btn-primary" href="https://wa.me/971542474416?text=Hello%20Capsule%20Educational%20Institute%2C%20I%27d%20like%20to%20know%20about%20payment%20options%20(Tabby%2C%20Tamara%20or%20EMI)." target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#i-chat"/></svg>Ask about payment plans</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Approvals -->
+  <section class="section" id="approvals">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>About Rabindranath Tagore University</h2>
+        <p>Your degree is awarded by Rabindranath Tagore University (RNTU), India's first skill-based private university.</p>
+      </div>
+      <div class="two">
+        <div>
+          <p>RNTU was established in 2010 by the Rabindranath Tagore Group. It focuses on skill-based education, research and strong industry linkages, with a presence in Madhya Pradesh and Jharkhand, India.</p>
+          <dl class="facts">
+            <div><dt>University</dt><dd>Rabindranath Tagore University (RNTU)</dd></div>
+            <div><dt>Established</dt><dd>2010, by the Rabindranath Tagore Group</dd></div>
+            <div><dt>Location</dt><dd>Madhya Pradesh and Jharkhand, India</dd></div>
+            <div><dt>Study support</dt><dd>Capsule Educational Institute, Abu Dhabi</dd></div>
+          </dl>
+        </div>
+        <div>
+          <h3>Approvals and recognitions</h3>
+          <table class="recs">
+            <caption class="sr">University approvals and recognitions</caption>
+            <tbody>
+              <tr><th scope="row">UGC Act, Section 2(f)</th><td>University Grants Commission Act</td></tr>
+              <tr><th scope="row">AICTE</th><td>All India Council for Technical Education</td></tr>
+              <tr><th scope="row">NCTE</th><td>National Council for Teacher Education</td></tr>
+              <tr><th scope="row">BCI</th><td>Bar Council of India</td></tr>
+              <tr><th scope="row">INC</th><td>Indian Nursing Council</td></tr>
+              <tr><th scope="row">M.P. Paramedical Council</th><td>Madhya Pradesh Paramedical Council</td></tr>
+              <tr><th scope="row">AIU</th><td>Association of Indian Universities</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="two honours">
+        <div>
+          <h3>Rankings</h3>
+          <dl class="log">
+            <div><dt>NIRF 2017</dt><dd>Only private university in Madhya Pradesh ranked among the top 200 universities in India</dd></div>
+            <div><dt>Careers360</dt><dd>Ranked no. 1 private university in Central India; AAA ranking in 2019</dd></div>
+            <div><dt>The Week</dt><dd>Ranked 33rd among non-government multi-disciplinary universities in India</dd></div>
+            <div><dt>Outlook</dt><dd>Ranked 18th among young universities of India; 2nd on value for money</dd></div>
+            <div><dt>India Today 2018</dt><dd>Ranked among India's top 30 private universities</dd></div>
+            <div><dt>CareerConnect 2018</dt><dd>Four-star rating for Best University of India</dd></div>
+          </dl>
+        </div>
+        <div>
+          <h3>Awards</h3>
+          <dl class="log">
+            <div><dt>2019</dt><dd>Education Excellence Award; Madhya Pradesh Gaurav Samman</dd></div>
+            <div><dt>2018</dt><dd>ASSOCHAM India Excellence in Education Award; Sushiksha Award; World Education Summit Award</dd></div>
+            <div><dt>2017</dt><dd>ASSOCHAM National Education Excellence Award for Best Innovation and Skill Development</dd></div>
+            <div><dt>2016</dt><dd>World Education Award, Dubai</dd></div>
+            <div><dt>2014</dt><dd>ASSOCHAM Excellence in Education Award; NIELIT Award</dd></div>
+            <div><dt>Career Connect</dt><dd>Recognised as India's first skill-based university by Career Connect Magazine</dd></div>
+          </dl>
+        </div>
+      </div>
+      <p class="fineprint">Recognitions, rankings and awards are taken from the RNTU prospectus and are dated as published. Each council approval applies to its own field of study. Ask our team for approval documents relevant to your chosen programme.</p>
+    </div>
+  </section>
+
+  <!-- Chancellor -->
+  <section class="section band">
+    <div class="wrap">
+      <div class="section-head"><h2>Chancellor's Message</h2></div>
+      <div class="chancellor">
+        <div class="chancellor-photo">Chancellor<br>photo</div>
+        <div>
+          <blockquote>
+            "Rabindranath Tagore University has been launched with a vision to transform its students into competent, inspired, and responsible professionals. The University aims to deliver not only world-class education in state-of-the-art facilities and infrastructure but also an environment for holistic learning that will help groom students into confident and smart individuals.<br><br>
+            The University will benefit from the wide range of industry linkages of the founding Education Group — Rabindranath Tagore. We are confident that final-year students will receive ample opportunities for successful placements in reputed companies across India."
+          </blockquote>
+          <p class="name">Mr. Santosh Kumar Choubey</p>
+          <p class="role">Chancellor, Rabindranath Tagore University</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How to apply -->
+  <section class="section" id="admission">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>From first message to graduation</h2>
+        <p>We support you from your initial career evaluation through to graduation.</p>
+      </div>
+      <ol class="steps">
+        <li><h3>Talk to an advisor</h3><p>Call or message us for a career evaluation and a programme that fits your goals.</p></li>
+        <li><h3>Confirm eligibility</h3><p>We check your school or degree qualifications against the programme requirements.</p></li>
+        <li><h3>Register and pay</h3><p>Complete your admission and choose how to pay: in full, or with Tabby, Tamara or EMI.</p></li>
+        <li><h3>Study and graduate</h3><p>Attend online classes and sit online exams with academic support, complete in 6 to 8 months.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- Lead capture -->
+  <section class="section lead-section" id="lead">
+    <div class="wrap">
+      <div class="lead-wrap">
+        <div>
+          <span class="eyebrow" style="color:#E63946">Get started</span>
+          <h2>Interested? Fill the form below</h2>
+          <p class="lead">Tell us a little about yourself and we'll get back to you with the right programme, eligibility and fee details.</p>
+          <ul class="hero-facts">
+            <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>No obligation, free career evaluation</li>
+            <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>We reply within one business day</li>
+          </ul>
+        </div>
+        <div class="lead-panel">
+          <form id="lead-form" novalidate>
+            <div class="field">
+              <label for="lead-name">Full name</label>
+              <input id="lead-name" name="name" type="text" autocomplete="name" required>
+            </div>
+            <div class="field">
+              <label for="lead-number">Phone / WhatsApp number</label>
+              <input id="lead-number" name="number" type="tel" autocomplete="tel" placeholder="+971 5X XXX XXXX" required>
+            </div>
+            <div class="field">
+              <label for="lead-email">Email</label>
+              <input id="lead-email" name="email" type="email" autocomplete="email" required>
+            </div>
+            <div class="field">
+              <label for="lead-course">Course interested in</label>
+              <select id="lead-course" name="course" required>
+                <option value="">Select a programme</option>
+                <optgroup label="Bachelor's">
+                  <option>BA</option>
+                  <option>BBA</option>
+                  <option>B.Com</option>
+                  <option>BCA</option>
+                </optgroup>
+                <optgroup label="Master's">
+                  <option>MSc</option>
+                  <option>MA</option>
+                  <option>MSW</option>
+                  <option>M.Com</option>
+                  <option>MBA</option>
+                </optgroup>
+                <option>Not sure yet</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="lead-age">Age</label>
+              <input id="lead-age" name="age" type="number" min="15" max="90" required>
+            </div>
+            <div class="field">
+              <label for="lead-nationality">Nationality</label>
+              <input id="lead-nationality" name="nationality" type="text" required>
+            </div>
+            <button class="btn btn-primary" type="submit" id="lead-submit">Submit enquiry</button>
+            <p class="form-msg" id="lead-msg" role="status"></p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="contact" id="contact">
+    <div class="wrap grid">
+      <div>
+        <h2>Talk to our admissions team</h2>
+        <p class="lead" style="color:#D4D4D4">Call or message us on WhatsApp for admission, eligibility, fees and payment plans. We will reply with the programmes that fit your qualifications.</p>
+        <ul class="numbers">
+          <li>
+            <span><span class="num-label">WhatsApp</span><span class="num">+971 54 247 4416</span></span>
+            <span class="num-actions">
+              <a class="btn btn-primary btn-sm" href="https://wa.me/971542474416" target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#i-chat"/></svg>WhatsApp</a>
+            </span>
+          </li>
+          <li>
+            <span><span class="num-label">Call</span><span class="num">+971 50 276 8411</span></span>
+            <span class="num-actions">
+              <a class="btn btn-ghost btn-sm" href="tel:+971502768411"><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg>Call</a>
+            </span>
+          </li>
+          <li>
+            <span><span class="num-label">Email</span><span class="num" style="font-size:1rem">capsuleae.edu@gmail.com</span></span>
+            <span class="num-actions">
+              <a class="btn btn-ghost btn-sm" href="mailto:capsuleae.edu@gmail.com"><svg class="ico" aria-hidden="true"><use href="#i-mail"/></svg>Email</a>
+            </span>
+          </li>
+        </ul>
+
+        <div class="socials">
+          <a href="https://whatsapp.com/channel/0029Vb8QN8T59PwXk4llaQ0Q" target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#i-chat"/></svg>WhatsApp Channel</a>
+          <a href="https://www.instagram.com/capsule.edu_/" target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#i-insta"/></svg>Instagram</a>
+        </div>
+
+        <address class="address">
+          <svg class="ico" aria-hidden="true"><use href="#i-pin"/></svg>
+          <span>
+            <strong>Capsule Educational Institute</strong><br>
+            ADCP Business Tower C, 1003, Electra Street,<br>
+            behind Al-Futtaim Honda Showroom,<br>
+            Al Danah, Zone 1, Abu Dhabi, UAE<br>
+            <a href="https://www.google.com/maps/search/?api=1&amp;query=ADCP%20Business%20Tower%20C%20Electra%20Street%20Al%20Danah%20Abu%20Dhabi" target="_blank" rel="noopener">Open in Google Maps</a>
+          </span>
+        </address>
+      </div>
+      <div></div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p>&copy; 2026 Capsule Educational Institute. Degrees awarded by Rabindranath Tagore University, India. Fees in AED, excluding VAT.</p>
+    <p><a href="tel:+971502768411">+971 50 276 8411</a> · <a href="https://wa.me/971542474416">+971 54 247 4416</a></p>
+  </div>
+</footer>
+
+<div class="quickbar">
+  <a class="btn btn-primary" href="https://wa.me/971542474416?text=Hello%20Capsule%20Educational%20Institute%2C%20I%27d%20like%20details%20about%20your%20programmes." target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#i-chat"/></svg>WhatsApp</a>
+  <a class="btn btn-ink" href="tel:+971502768411"><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg>Call now</a>
+</div>
+
+<script>
+/* ============================================================
+   GOOGLE SHEET LEAD SUBMISSION
+   1. Paste your deployed Apps Script Web App URL below
+      (looks like https://script.google.com/macros/s/AKfycb.../exec)
+   ============================================================ */
+const GOOGLE_SHEET_ENDPOINT = "PASTE_YOUR_APPS_SCRIPT_WEB_APP_URL_HERE";
+
+const leadForm = document.getElementById("lead-form");
+const leadMsg = document.getElementById("lead-msg");
+const leadSubmit = document.getElementById("lead-submit");
+
+leadForm.addEventListener("submit", async function (e) {
+  e.preventDefault();
+  leadMsg.textContent = "";
+  leadMsg.className = "form-msg";
+
+  const data = {
+    name: document.getElementById("lead-name").value.trim(),
+    number: document.getElementById("lead-number").value.trim(),
+    email: document.getElementById("lead-email").value.trim(),
+    course: document.getElementById("lead-course").value,
+    age: document.getElementById("lead-age").value,
+    nationality: document.getElementById("lead-nationality").value.trim()
+  };
+
+  if (!data.name || !data.number || !data.email || !data.course || !data.age || !data.nationality) {
+    leadMsg.textContent = "Please fill in all fields.";
+    leadMsg.className = "form-msg err";
+    return;
+  }
+
+  leadSubmit.disabled = true;
+  leadSubmit.textContent = "Submitting...";
+
+  try {
+    if (!GOOGLE_SHEET_ENDPOINT || GOOGLE_SHEET_ENDPOINT.indexOf("PASTE_YOUR") === 0) {
+      throw new Error("no-endpoint");
+    }
+    await fetch(GOOGLE_SHEET_ENDPOINT, {
+      method: "POST",
+      mode: "no-cors", // Apps Script web apps don't return readable CORS responses
+      headers: { "Content-Type": "text/plain;charset=utf-8" },
+      body: JSON.stringify(data)
+    });
+    leadMsg.textContent = "Thank you! We've received your enquiry and will contact you shortly.";
+    leadMsg.className = "form-msg ok";
+    leadForm.reset();
+  } catch (err) {
+    // Fallback: open WhatsApp with the details pre-filled if the sheet endpoint isn't set or fails
+    const waMsg = "Hello Capsule Educational Institute, my name is " + data.name +
+      ". I'm interested in " + data.course + ". Age: " + data.age +
+      ", Nationality: " + data.nationality + ", Email: " + data.email + ".";
+    window.open("https://wa.me/971542474416?text=" + encodeURIComponent(waMsg), "_blank");
+    leadMsg.textContent = "Opened WhatsApp with your details — please hit send there to complete your enquiry.";
+    leadMsg.className = "form-msg ok";
+    leadForm.reset();
+  } finally {
+    leadSubmit.disabled = false;
+    leadSubmit.textContent = "Submit enquiry";
+  }
+});
+</script>
+</body>
+</html>
